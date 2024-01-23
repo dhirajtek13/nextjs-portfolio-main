@@ -4,8 +4,17 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { resumeLink } from "../linksConfig";
 
 const HeroSection = () => {
+  //https://drive.google.com/file/d/1INOfAPdfsIiRWLkNASgd_LVhft7IsTrf/view?usp=sharing
+
+  const handleDownload = () => {
+    // Construct the Google Drive download link
+    const downloadLink = resumeLink;
+    window.location.href = downloadLink;
+  };
+
   return (
     <section className="lg:py-16">
       <div className="grid grid-cols-1 sm:grid-cols-12">
@@ -15,7 +24,7 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
         >
-          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-7xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m{" "}
             </span>
@@ -37,7 +46,9 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-          Specialized in crafting dynamic and responsive user interfaces, leveraging my expertise in React along with a keen eye for design to create seamless and engaging web applications. 
+            Specialized in crafting dynamic and responsive user interfaces,
+            leveraging my expertise in React along with a keen eye for design to
+            create seamless and engaging web applications.
           </p>
           <div>
             <Link
@@ -47,12 +58,15 @@ const HeroSection = () => {
               Hire Me
             </Link>
             <Link
-              href="/"
+              href={resumeLink} target="_blank"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
-              <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
-                Download CV
-              </span>
+                <span
+                  //onClick={handleDownload}
+                  className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2"
+                >
+                  Download CV
+                </span>
             </Link>
           </div>
         </motion.div>
