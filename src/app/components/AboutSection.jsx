@@ -24,8 +24,8 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Sipna COET Engg & Technology </li>
-        <p>Amravati University, Maharashtra, India</p>
+        <a href="https://sipnaengg.ac.in/" target="_blank"><li>Sipna COET Engg & Technology </li>
+        <p>Amravati University, Maharashtra, India</p></a>
       </ul>
     ),
   },
@@ -34,9 +34,9 @@ const TAB_DATA = [
     id: "certifications",
     content: (
       <ul className="list-disc pl-2">
-        <li>Full Stack Bootcamp - Udemy</li>
-        <li>React.js complete Guide 2024 - Udemy</li>
-        <li>GitLab Mastery - LinkedIn</li>
+        <li><a href="https://drive.google.com/drive/folders/1jKglkDPgVsuQDBQN03xlczuo5WjfV0Id?usp=sharing">Full Stack Bootcamp - Udemy</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1jKglkDPgVsuQDBQN03xlczuo5WjfV0Id?usp=sharing">React.js complete Guide 2024 - Udemy</a></li>
+        <li><a href="https://drive.google.com/drive/folders/1jKglkDPgVsuQDBQN03xlczuo5WjfV0Id?usp=sharing">GitLab Mastery - LinkedIn</a></li>
       </ul>
     ),
   },
